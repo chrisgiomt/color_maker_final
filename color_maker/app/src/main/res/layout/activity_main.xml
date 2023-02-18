@@ -1,18 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <TextView
+    <View
+        android:id="@+id/colorBox"
+        android:layout_width="262dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="50dp" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Switch
+            android:id="@+id/redSwitch"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:thumb="@drawable/switch_custom_thumb_selector"
+            android:track="@drawable/switch_custom_track_selector"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <SeekBar
+            android:id="@+id/redSeekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:progressDrawable="@drawable/red_seekbar_progress"
+            android:thumb="@drawable/red_seekbar_thumb" />
+
+        <EditText
+            android:id="@+id/redEditText"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="false"
+            android:hint="@string/enter_decimal_here"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/greenSwitch"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:thumb="@drawable/switch_custom_thumb_selector"
+            android:track="@drawable/switch_custom_track_selector"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <SeekBar
+            android:id="@+id/greenSeekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:progressDrawable="@drawable/green_seekbar_progress"
+            android:thumb="@drawable/green_seekbar_thumb" />
+
+        <EditText
+            android:id="@+id/greenEditText"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="false"
+            android:hint="@string/enter_decimal_here"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/blueSwitch"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:thumb="@drawable/switch_custom_thumb_selector"
+            android:track="@drawable/switch_custom_track_selector"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <SeekBar
+            android:id="@+id/blueSeekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:progressDrawable="@drawable/blue_seekbar_progress"
+            android:thumb="@drawable/blue_seekbar_thumb" />
+
+        <EditText
+            android:id="@+id/blueEditText"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="false"
+            android:hint="@string/enter_decimal_here"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/resetButton"
+        android:textColor="#D1C4E9" />
+
+</LinearLayout>
